@@ -2,16 +2,16 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-blue-600 shadow-lg fixed w-full z-50 top-0">
+    <nav className="bg-blue-600 shadow-lg fixed w-full h-22 z-50 top-0">
       {" "}
       {/* z-index artırıldı */}
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-22">
           <Link
             to="/"
             className="text-2xl font-bold text-white hover:text-white"
           >
-            Haber Akışı
+            BK MOBİL HABER
           </Link>
 
           <div className="flex items-center space-x-6">
@@ -25,7 +25,7 @@ const Navbar = () => {
                 }`
               }
             >
-              Ana Sayfa
+              Anasayfa
             </NavLink>
             <NavLink
               to="/favorites"

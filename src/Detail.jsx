@@ -17,7 +17,7 @@ const Detail = () => {
   return (
     <div className="container mx-auto p-4 pt-20">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">{article.title}</h1>
+        <h1 className="text-black text-2xl font-bold mb-4">{article.title}</h1>
         <img
           src={article.urlToImage}
           alt={article.title}

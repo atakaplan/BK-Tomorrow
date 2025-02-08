@@ -16,11 +16,11 @@ const SearchBar = ({ onSearch }) => {
           value={term}
           onChange={(e) => setTerm(e.target.value)}
           placeholder="Haber ara..."
-          className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
+          className="flex-1 px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
         />
         <button
           type="submit"
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-r-lg transition-colors flex items-center"
+          className="px-6 py-3 bg-green-700 hover:bg-blue-700 text-white font-medium rounded-r-lg transition-colors flex items-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
