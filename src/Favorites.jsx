@@ -15,7 +15,7 @@ const Favorites = () => {
             to={`/detail/${encodeURIComponent(article.title)}`}
             state={{ article }}
           >
-            <NewsCard article={article} />
+            <NewsCard article={article} showRemoveButton={true} />
           </Link>
         ))}
       </div>

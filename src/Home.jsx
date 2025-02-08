@@ -28,10 +28,16 @@ const Home = () => {
   }, [query, page]);
 
   return (
-    <div className="container mx-auto p-4 pt-20"> {/* Ortalama ve padding eklendi */}
-      <SearchBar onSearch={(term) => { setQuery(term); setPage(1); setArticles([]); }} />
-      
-
+    <div className="container mx-auto p-4 pt-20">
+      {" "}
+      {/* Ortalama ve padding eklendi */}
+      <SearchBar
+        onSearch={(term) => {
+          setQuery(term);
+          setPage(1);
+          setArticles([]);
+        }}
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {articles.map((article, index) => (
           <Link
@@ -43,7 +49,6 @@ const Home = () => {
           </Link>
         ))}
       </div>
-
       {loading && <div className="text-center">Yükleniyor...</div>}
       <button
         onClick={() => setPage(page + 1)}
