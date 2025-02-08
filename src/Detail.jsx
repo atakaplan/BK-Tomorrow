@@ -1,5 +1,5 @@
 // Detail.js (Güncellenmiş)
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useNews } from "./NewsContext";
 
 const Detail = () => {
@@ -9,10 +9,9 @@ const Detail = () => {
   const { favorites, addFavorite, removeFavorite } = useNews();
 
   const isFavorite = favorites.some((item) => item.title === article.title);
-
-  const handleOpenSource = () => {
-    // Yeni sekmede aç
-    window.open(article.url, "_blank", "noopener,noreferrer");
+  const navigate = useNavigate();
+  const handleOpenInApp = () => {
+    navigate("/haber-kaynagi", { state: { url: article.url } });
   };
 
   return (
@@ -41,10 +40,10 @@ const Detail = () => {
           </button>
 
           <button
-            onClick={handleOpenSource}
+            onClick={handleOpenInApp}
             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
           >
-            ↗️ Haber Kaynağında Aç
+            📰 Haber Kaynağını Göster
           </button>
         </div>
       </div>

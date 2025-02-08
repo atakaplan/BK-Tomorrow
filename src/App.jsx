@@ -5,6 +5,7 @@ import Detail from "./Detail";
 import Favorites from "./Favorites";
 import { NewsProvider } from "./NewsContext";
 import ArticleFrame from "./ArticleFrame";
+import HaberKaynagi from "./HaberKaynagi";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/favorites" element={<Favorites />} />
             {/* Yeni route ekle */}
             <Route path="/article-iframe" element={<ArticleFrame />} />
+            <Route path="/haber-kaynagi" element={<HaberKaynagi />} />
           </Routes>
         </main>
       </Router>
