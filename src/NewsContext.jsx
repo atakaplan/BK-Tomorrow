@@ -1,15 +1,15 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
 
 const NewsContext = createContext();
 
 export const NewsProvider = ({ children }) => {
   const [favorites, setFavorites] = useState(() => {
-    const localData = localStorage.getItem('favorites');
+    const localData = localStorage.getItem("favorites");
     return localData ? JSON.parse(localData) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
   const addFavorite = (article) => {
@@ -17,7 +17,7 @@ export const NewsProvider = ({ children }) => {
   };
 
   const removeFavorite = (title) => {
-    setFavorites(favorites.filter(item => item.title !== title));
+    setFavorites(favorites.filter((item) => item.title !== title));
   };
 
   return (
