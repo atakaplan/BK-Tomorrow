@@ -4,7 +4,7 @@ const NewsCard = ({ article, showRemoveButton = false }) => {
   const { removeFavorite } = useNews();
 
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col relative">
+    <div className="border border-gray-400 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col hover:-translate-y-3 relative">
       {showRemoveButton && (
         <button
           onClick={(e) => {
@@ -37,8 +37,8 @@ const NewsCard = ({ article, showRemoveButton = false }) => {
         alt={article.title}
         className="w-full h-48 object-cover"
       />
-      <div className="p-4 flex flex-col flex-grow">
-        <h3 className="font-bold text-lg mb-2">{article.title}</h3>
+      <div className="p-10 flex flex-col flex-grow">
+        <h3 className="font-bold text-lg mb-2 text-black">{article.title}</h3>
         <p className="text-gray-600 text-sm mb-2 flex-grow">
           {article.description}
         </p>

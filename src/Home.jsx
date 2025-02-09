@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
-  const [query, setQuery] = useState("besiktas");
+  const [query, setQuery] = useState("random news");
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
@@ -28,7 +28,7 @@ const Home = () => {
   }, [query, page]);
 
   return (
-    <div className="container mx-auto p-4 pt-20">
+    <div className="container mx-auto p-4 pt-15">
       {" "}
       {/* Ortalama ve padding eklendi */}
       <SearchBar
@@ -38,7 +38,7 @@ const Home = () => {
           setArticles([]);
         }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {articles.map((article, index) => (
           <Link
             key={index}
@@ -52,9 +52,9 @@ const Home = () => {
       {loading && <div className="text-center">Yükleniyor...</div>}
       <button
         onClick={() => setPage(page + 1)}
-        className="bg-blue-500 text-white px-4 py-2 rounded mx-auto block mt-4"
+        className="bg-blue-500 text-white hover:bg-blue-700 px-4 py-2 rounded mx-auto block mt-4"
       >
-        Daha Fazla Yükle
+        Daha Fazla Haber Yükle
       </button>
     </div>
   );
