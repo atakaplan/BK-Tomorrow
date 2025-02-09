@@ -58,6 +58,26 @@ Projeyi yerel ortamınıza klonladıktan sonra aşağıdaki adımları izleyin:
    ```bash
    npm run dev
    ```
+## Proje Yapısı
+Proje dosya yapısı şu şekildedir:
+```
+/src
+  /components
+    NewsCard.jsx
+    Navbar.jsx
+    Home.jsx
+    Detail.jsx
+    Favorites.jsx
+    ArticleFrame.jsx
+    NewsSource.jsx
+  /context
+    NewsContext.jsx
+  /styles
+    App.css
+    index.css
+  App.jsx
+  main.jsx
+```
 
 ## Kullanım
 

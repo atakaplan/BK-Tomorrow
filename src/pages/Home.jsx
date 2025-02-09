@@ -17,7 +17,6 @@ const Home = () => {
         const { data } = await axios.get(
           `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=a0c3d50dc320406c87c6732b38f348e4`
         );
-        console.log("Gelen veri:", data); // Gelen veri kontrolü
         setArticles((prev) => [...prev, ...data.articles]);
       } catch (error) {
         console.error(error);
@@ -32,9 +31,15 @@ const Home = () => {
       {" "}
       <SearchBar
         onSearch={(term) => {
-          setQuery(term);
-          setPage(1);
-          setArticles([]);
+          // Eger arama terimi degismemisse sayfayi bir arttir
+          if (term === query) {
+            setPage((prev) => prev + 1);
+            setArticles([]);
+          } else {
+            setQuery(term);
+            setPage(1);
+            setArticles([]);
+          }
         }}
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
