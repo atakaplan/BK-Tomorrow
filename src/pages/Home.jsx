@@ -15,7 +15,7 @@ const Home = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=a0c3d50dc320406c87c6732b38f348e4`
+          ` https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=a0c3d50dc320406c87c6732b38f348e4`
         );
         setArticles((prev) => [...prev, ...data.articles]);
       } catch (error) {
