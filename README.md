@@ -90,3 +90,8 @@ Proje dosya yapısı şu şekildedir:
 ## Lisans
 
 Bu proje MIT lisansı ile lisanslanmıştır.
+
+## Site Link ve Görünüş
+https://atakaplan.github.io/haber-akis-uygulama/
+![image](https://github.com/user-attachments/assets/d3991046-bcd1-43ca-8383-a97caf90f1be)
+
