@@ -96,3 +96,4 @@ https://atakaplan.github.io/haber-akis-uygulama/
 
 ![image](https://github.com/user-attachments/assets/d3991046-bcd1-43ca-8383-a97caf90f1be)
 ![image](https://github.com/user-attachments/assets/d455a223-9b6c-41b6-947a-6a98193ea482)
+![image](https://github.com/user-attachments/assets/e0ff344e-69b6-49b7-828b-849f6425c654)
