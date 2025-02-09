@@ -1,12 +1,11 @@
-// ArticleFrame.js (Yeni Bileşen)
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ArticleFrame = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
   if (!state?.url) {
-    navigate('/');
+    navigate("/");
     return null;
   }
 
@@ -21,7 +20,7 @@ const ArticleFrame = () => {
         </button>
       </div>
       <iframe
-        title="haber-kaynagi"
+        title="news-source"
         src={state.url}
         className="flex-grow w-full border-none"
       />

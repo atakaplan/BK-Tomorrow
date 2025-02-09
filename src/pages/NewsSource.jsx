@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const HaberKaynagi = () => {
+const NewsSource = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
 
@@ -11,8 +11,7 @@ const HaberKaynagi = () => {
 
   return (
     <iframe
-      title="haber-kaynagi"
-      // Iframe src'sini şu şekilde değiştirin:
+      title="news-source"
       src={`https://api.allorigins.win/raw?url=${encodeURIComponent(
         state?.url
       )}`}
@@ -21,4 +20,4 @@ const HaberKaynagi = () => {
   );
 };
 
-export default HaberKaynagi;
+export default NewsSource;

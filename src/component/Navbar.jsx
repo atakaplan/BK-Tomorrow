@@ -4,7 +4,6 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-600 shadow-lg fixed w-full h-22 z-50 top-0">
       {" "}
-      {/* z-index artırıldı */}
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-22">
           <Link

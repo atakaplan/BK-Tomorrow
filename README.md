@@ -40,7 +40,7 @@ Favori haberleri listeleyen bileşen.
 
 Haber kaynağını iframe içinde gösteren yeni bileşen.
 
-### `HaberKaynagi`
+### `NewsSource`
 
 Haber kaynağını iframe içinde gösteren bileşen.
 

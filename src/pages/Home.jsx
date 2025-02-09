@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import NewsCard from "./NewsCard";
-import SearchBar from "./SearchBar";
+import NewsCard from "../component/NewsCard";
+import SearchBar from "../component/SearchBar";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -14,10 +14,10 @@ const Home = () => {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        // Home.js içinde:
         const { data } = await axios.get(
           `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=a0c3d50dc320406c87c6732b38f348e4`
         );
+        console.log("Gelen veri:", data); // Gelen veri kontrolü
         setArticles((prev) => [...prev, ...data.articles]);
       } catch (error) {
         console.error(error);
@@ -30,7 +30,6 @@ const Home = () => {
   return (
     <div className="container mx-auto p-4 pt-15">
       {" "}
-      {/* Ortalama ve padding eklendi */}
       <SearchBar
         onSearch={(term) => {
           setQuery(term);

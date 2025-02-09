@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
-import Home from "./Home";
-import Detail from "./Detail";
-import Favorites from "./Favorites";
-import { NewsProvider } from "./NewsContext";
-import ArticleFrame from "./ArticleFrame";
-import HaberKaynagi from "./HaberKaynagi";
+import Navbar from "./component/Navbar";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+import Favorites from "./component/Favorites";
+import { NewsProvider } from "./context/NewsContext";
+import ArticleFrame from "./component/ArticleFrame";
+import NewsSource from "./pages/NewsSource";
 
 function App() {
   return (
@@ -17,9 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/detail/:title" element={<Detail />} />
             <Route path="/favorites" element={<Favorites />} />
-            {/* Yeni route ekle */}
             <Route path="/article-iframe" element={<ArticleFrame />} />
-            <Route path="/haber-kaynagi" element={<HaberKaynagi />} />
+            <Route path="/news-source" element={<NewsSource />} />
           </Routes>
         </main>
       </Router>

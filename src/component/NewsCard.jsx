@@ -1,4 +1,4 @@
-import { useNews } from "./NewsContext";
+import { useNews } from "../context/NewsContext";
 
 const NewsCard = ({ article, showRemoveButton = false }) => {
   const { removeFavorite } = useNews();
@@ -31,11 +31,10 @@ const NewsCard = ({ article, showRemoveButton = false }) => {
         </button>
       )}
 
-      {/* Diğer kart içeriği aynı kalıyor */}
       <img
         src={article.urlToImage || "https://via.placeholder.com/300"}
         alt={article.title}
-        className="w-full h-48 object-cover"
+        className="w-auto h-auto object-cover"
       />
       <div className="p-10 flex flex-col flex-grow">
         <h3 className="font-bold text-lg mb-2 text-black">{article.title}</h3>

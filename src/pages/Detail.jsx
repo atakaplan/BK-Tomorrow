@@ -1,6 +1,5 @@
-// Detail.js (Güncellenmiş)
 import { useLocation, useNavigate } from "react-router-dom";
-import { useNews } from "./NewsContext";
+import { useNews } from "../context/NewsContext";
 import { useState } from "react";
 
 const Detail = () => {
@@ -13,7 +12,7 @@ const Detail = () => {
   const isFavorite = favorites.some((item) => item.title === article.title);
   const navigate = useNavigate();
   const handleOpenInApp = () => {
-    navigate("/haber-kaynagi", { state: { url: article.url } });
+    navigate("/news-source", { state: { url: article.url } });
   };
 
   // Paylaşım fonksiyonu
@@ -25,7 +24,6 @@ const Detail = () => {
         url: article.url,
       });
     } catch (error) {
-      // Fallback: Linki panoya kopyala
       navigator.clipboard.writeText(article.url);
       setShowCopied(true);
       setTimeout(() => setShowCopied(false), 2000);
@@ -44,7 +42,6 @@ const Detail = () => {
         <p className="text-gray-700 mb-4 leading-relaxed">{article.content}</p>
 
         <div className="flex gap-4 mb-6 flex-wrap">
-          {/* Paylaş Butonu */}
           <button
             onClick={handleShare}
             className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors flex items-center"
